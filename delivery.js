@@ -12,7 +12,7 @@ $(document).ready(function(){
         }else{
             this.href += $input.val() + "%0AMeu%20nome%20é:"+ $nome.val() + "%0AMeu%20endereço%20é:" +$endereco.val() + "%0ABebida:" + $bebidas.val() + "%0ALoja:" + $loja.val();
         }
-    });
+    });/*
     $("article").click(function(){
         $(this).addClass("active");
         $(".openbg").addClass("active");
@@ -23,7 +23,7 @@ $(document).ready(function(){
         $(".openbg").removeClass("active");
         $("fechar").removeClass("active");
        
-    });
+    });*/
  
   
     $('.minus').click(function () {
@@ -57,27 +57,34 @@ $(document).ready(function(){
 
 
     });
-    $('article[data-produto-type="brasileira"]').appendTo( ".brasileira");
+    $('article[data-produto-type="gazoza"]').appendTo( ".gazoza");
     $('article[data-estoque-type=""]').addClass("esgotado");
-    $('header ul li:nth-child(1)').click(function(){
-        $('section.japones').addClass("active");
-        console.log("foi 1");
-        if($('section.brasileira.active').length ==1){
-            
-            $('section.brasileira').removeClass("active");
-        }
+    
+    
+    $('.banner').slick();
+  
+    $('aside ul li.pneu').click(function(){
+        console.log("foi pneu")
+        $('aside li.pneu').toggleClass("active");
     });
-    $('header ul li:nth-child(2)').click(function(){
-        console.log("foi 2")
-        $('section.brasileira').addClass("active");
-        if($('section.japones.active').length ==1){
-           
-            $('section.japones').removeClass("active");
-        }
+
+    $('aside ul li.gazoza').click(function(){
+        console.log("foi gazoza")
+        $('aside li.gazoza').toggleClass("active");
+    });
+    $('aside ul li.granada').click(function(){
+        console.log("foi pneu")
+        $('aside li.granada').toggleClass("active");
+    });
+
+    $('aside ul li.polvora').click(function(){
+        console.log("foi gazoza")
+        $('aside li.polvora').toggleClass("active");
     });
     $('.dev').click(function(){
        
         $('.dev').toggleClass("active");
     });
+
     
 });
